@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { createClient } from "urql";
 import { useContract, useSigner } from "wagmi";
-import ERC721ABI from "../../abis/CeloNFT.json";
+import ERC721ABI from "../../abis/ERC721.json";
 import MarketplaceABI from "../../abis/NFTMarketplace.json";
 import Navbar from "../../components/Navbar";
 import { MARKETPLACE_ADDRESS, SUBGRAPH_URL } from "../../constants";

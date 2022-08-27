@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useAccount, useContract, useProvider, erc721ABI } from "wagmi";
+import { useAccount, useContract, useProvider } from "wagmi";
+import ERC721ABI from "../abis/ERC721.json";
 import styles from "../styles/Listing.module.css";
 import { formatEther } from "ethers/lib/utils";
 
@@ -17,7 +18,7 @@ export default function Listing(props) {
   const { address } = useAccount();
   const ERC721Contract = useContract({
     addressOrName: props.nftAddress,
-    contractInterface: erc721ABI,
+    contractInterface: ERC721ABI,
     signerOrProvider: provider,
   });
 
@@ -45,10 +46,7 @@ export default function Listing(props) {
       setName(metadataJSON.name);
       setImageURI(image);
       setLoading(false);
-    } catch (error) {
-      console.error(error);
-      setLoading(false);
-    }
+    } catch (error) {}
   }
 
   // Fetch the NFT details when component is loaded

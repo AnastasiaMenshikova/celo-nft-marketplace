@@ -39,13 +39,13 @@
     "fork": "hardhat node --no-deploy --network hardhat",
     "test": "hardhat test",
     "compile": "hardhat compile",
-    "deploy": "hardhat deploy --export-all ./react-app/src/contracts/hardhat_contracts.json",
+    "deploy": "hardhat deploy --network alfajores",
     "accounts": "hardhat accounts",
     "balance": "hardhat balance",
     "send": "hardhat send",
     "generate": "hardhat generate",
     "account": "hardhat account",
-    "verify": "hardhat etherscan-verify",
+    "verify": "hardhat --network alfajores sourcify",
     "coverage": "hardhat coverage",
     "slither": "slither . --solc-remaps '@openzeppelin=node_modules/@openzeppelin' --exclude naming-convention,external-function,low-level-calls"
   }
