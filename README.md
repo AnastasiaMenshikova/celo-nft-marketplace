@@ -17,13 +17,17 @@ yarn start
 ```
 Create the `.env` file and add your own API keys and private key by using `.example.env`. 
 
-To deploy smart contract to Celo alfajores testnet use:
+To deploy and verify smart contract to Celo alfajores testnet use:
 
  ```bash
  
- yarn deploy --network alfajores
+ yarn deploy
+
+ yarn verify
 
  ```
+Verified smart contracts can be find [here](https://alfajores-blockscout.celo-testnet.org/).
+
 
 For testing added static analyzer [Slither](https://github.com/crytic/slither) for Solidity code. Run following command:
 
